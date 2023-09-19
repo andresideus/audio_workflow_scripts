@@ -2,6 +2,7 @@ import os
 import shutil
 import yaml
 import time
+import numpy
 import soundfile as sf
 import sounddevice as sd
 from google.oauth2.service_account import Credentials

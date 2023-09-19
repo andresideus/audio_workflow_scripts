@@ -5,6 +5,7 @@ if [ ! -d "python_env" ]; then
     echo "Virtual environment not found. Creating one..."
     python3 -m venv python_env
     source python_env/bin/activate
+    pip install --upgrade pip
     pip install -r requirements.txt
 else
     echo "Virtual environment found."
@@ -18,5 +19,6 @@ else
 fi
 
 # Run the Python script
-pip install -r requirements.txt --quiet;\
+pip install -r requirements.txt --quiet
+pip install --upgrade pip --quiet
 python3 ./process_audio_files.py
