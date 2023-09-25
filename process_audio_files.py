@@ -59,7 +59,7 @@ def main():
     last_fxname = None
     fxname_increment = 1
     
-    ignore_folders = ['F6_SETTINGS', 'FALSE_TAKE', 'TRASH']
+    ignore_folders = ['F6_SETTINGS', 'FALSE TAKE', 'TRASH']
     folders_to_delete = []
 
     for root, dirs, files in os.walk(config['sd_card_path']):
@@ -94,7 +94,7 @@ def main():
                 mic_key = track_info.replace(".", "").replace(" ", "")
                 mic = config['mic'].get(mic_key, "UNKNOWN")
 
-                new_filename = f"CatID_{fxname} {fxname_increment}_{config['creator_id']}_{config['source_id']}_{date}-{mic}.WAV"
+                new_filename = f"{fxname} {fxname_increment}_{config['creator_id']}_{config['source_id']}_{date}-{mic}.WAV"
                 full_path = os.path.join(root, wav_file)
                 push_to_google_drive(full_path, new_filename, config['google_drive_folder_id'], config)
                 folders_to_delete.append(root)

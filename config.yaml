@@ -1,4 +1,4 @@
-sd_card_path: "/Users/q/F6_SD_TEST/"
+sd_card_path: "/Volumes/F6_SD/"
 # My Drive/audio_production/raw_recording_backlog
 google_drive_folder_id: "1-Jp0e5ZDqzIpn2PGCg0Ht_Mb54PqxySF"
 service_json_path: "/Users/q/aia-process-audio-files-aea720c2415f.json"
