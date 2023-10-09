@@ -38,7 +38,7 @@ def push_to_google_drive(file_path, new_filename, folder_id, config):
         creds = Credentials.from_service_account_file(config['service_json_path'], scopes=SCOPES)
         service = build('drive', 'v3', credentials=creds)
         
-        media = MediaFileUpload(file_path, mimetype='audio/wav')
+        media = MediaFileUpload(file_path, mimetype='audio/wav', resumable=True)
         request = service.files().create(media_body=media, body={
             'name': new_filename,
             'parents': [folder_id]
